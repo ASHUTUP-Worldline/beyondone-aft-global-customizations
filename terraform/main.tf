@@ -7,8 +7,6 @@ resource "aws_s3_account_public_access_block" "block_all_public" {
 
 data "aws_caller_identity" "current" {}
 
-
-
 resource "aws_s3_bucket" "example" {
   bucket = "default-bucket-${data.aws_caller_identity.current.account_id}"
 
